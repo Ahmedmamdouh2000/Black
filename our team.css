@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #0f0f23, #2a2a5e);
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.team-section {
+    text-align: center;
+    padding: 50px;
+    color: #ffffff;
+}
+
+.team-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.team-section p {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: #b0b0b0;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    background-color: #1e1e3f;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(25% - 15px); /* 4 members in a row */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* To add space around the cards */
+    position: relative;
+}
+
+.member-image {
+    position: relative;
+}
+
+.member-image img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.team-member:hover .overlay {
+    opacity: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 90px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1da1f2; /* Twitter blue */
+    transform: scale(1.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .team-member {
+        width: calc(33.33% - 40px); /* 3 members in a row */
+    }
+}
+
+@media (max-width: 992px) {
+    .team-member {
+        width: calc(50% - 40px); /* 2 members in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        width: calc(100% - 40px); /* 1 member in a row */
+    }
+
+    .team-section h1 {
+        font-size: 2em;
+    }
+
+    .team-section p {
+        font-size: 1em;
+    }
+}
